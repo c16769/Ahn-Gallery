@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AHN GALLERY</title>
+    <link rel="stylesheet"
+        href="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/easygpt/default.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <style>
+        /* Navbar 스타일 변경 */
+        .body {
+            background-color: #000; /* 검은색 배경 */
+        }
+        .nav-item {
+            color: #fff !important; /* 하얀색 텍스트 */
+        }
+        .card img {
+            width: 100%;
+            /* 이미지의 가로 길이를 100%로 설정하여 부모 요소에 맞게 조절 */
+            height: 180px;
+            /* 이미지의 세로 길이를 원하는 크기로 설정 */
+            object-fit: cover;
+            /* 이미지의 비율을 유지한 채 부모 요소에 맞게 조절 */
+        }
+
+        .card {
+            width: 100%;
+            /* 모든 카드의 가로 길이를 18rem으로 설정 */
+            margin-bottom: 20px;
+            position: relative; /* 상대 위치 설정 */
+        }
+
+        .card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0; /* 처음에는 투명하게 설정 */
+            background-color: rgba(0, 0, 0, 0.7); /* 배경 색상 및 투명도 조절 */
+            color: #fff;
+            transition: opacity 0.3s ease; /* 부드러운 전환 효과를 위해 추가 */
+        }
+
+        .card:hover .overlay {
+            opacity: 1; /* 마우스 호버 시 투명도를 1로 설정하여 나타나게 함 */
+        }
+
+        .card:hover {
+            transform: scale(1.0);
+            /* 마우스 호버 시 크기를 1.1배로 확대 */
+            transition: transform 0.3s ease;
+            /* 부드러운 전환 효과를 위해 추가 */
+        }
+        
+        .mx-auto {
+            margin-right: auto !important;
+            margin-left: auto !important;
+        }
+        .profile-content p {
+            font-size: 16px; /* 원하는 작은 크기로 조절하세요. */
+            line-height: 1.2; /* 원하는 줄 간격으로 조절하세요. */
+        }
+
+        h1, h2, h4 {
+            color: #fff; /* 흰색으로 변경 */  
+            line-height: 1.3;    
+        }   
+        body {
+            background-color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" style="background-color: #000;">Ahn Haengmi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>  
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html" style="color: #fff;">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#board" style="color: #fff;"">Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/artist_haengmi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="color: #fff;" target="_blank">Instagram</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="hero text-center py-5" style="background-color: #000; background-size: cover; background-position: center center; height: 150px;">
+        <h1> Works</h1>
+    </div><div class="container mt-5">
+        <div class="row">
+            <!-- 카드1 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="1.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 인사동 2023 봄 </h3>
+                        <p> 910×1168mm • 한지에 혼합재료 채색 • 2024 </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 카드2 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="2.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 런던 테이트모던 광장 2018 여름 </h3>
+                        <p> 606×727mm • 한지에 혼합재료 채색 • 2023 </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 카드3 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="3.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 런던 테이트모던 강가 2018 여름 </h3>
+                        <p> 910×1168mm • 한지에 혼합재료 채색 • 2023 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <!-- Cards go here -->
+        </div>
+        <div class="row">
+            <!-- 카드4 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="4.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 로스앤젤레스 할리우드 2020 겨울 </h3>
+                        <p> 530×651mm • 한지에 혼합재료 채색 • 2023 </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 카드5 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="5.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 런던 테이트모던 카페 2018 여름 </h3>
+                        <p> 625×1270mm • 한지에 혼합재료 채색 • 2023 </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 카드6 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="6.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 로스앤젤레스 2020 겨울 </h3>
+                        <p> 727×909mm • 한지에 혼합재료 채색 • 2023 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <!-- Cards go here -->
+        </div>
+        <div class="row">
+            <!-- 카드7 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="7.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 피렌체 두오모성당 2015 여름 </h3>
+                        <p> 1343×662mm • 한지에 혼합재료 채색 • 2023 </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 카드8 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="8.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 롯데월드 아이스링크 2017 겨울 </h3>
+                        <p> 242×334mm • 한지에 혼합재료 채색 • 2017 </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 카드9 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="9.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 롯데월드 2017 겨울 </h3>
+                        <p> 242×334mm • 한지에 혼합재료 채색 • 2017 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <!-- Cards go here -->
+        </div>
+        <div class="row">
+            <!-- 카드10 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="10.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 노량진 2016 봄 </h3>
+                        <p> 652×1270mm • 한지에 혼합재료 채색 • 2017 </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 카드11 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="11.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 부평 테마의 거리 2016 봄 </h3>
+                        <p> 1400×630mm • 한지에 혼합재료 채색 • 2016 </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 카드12 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="12.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 홍대입구 2017 가을 </h3>
+                        <p> 800×1620mm • 한지에 혼합재료 채색 • 2017 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <!-- Cards go here -->
+        </div>
+        <div class="row">
+            <!-- 카드13 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="13.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 이태원역 1번출구 2016 가을 </h3>
+                        <p> 625×1270mm • 한지에 혼합재료 채색 • 2017 </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 카드14 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="14.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 부평 2015 봄 </h3>
+                        <p> 451×620mm • 한지에 혼합재료 채색 • 2015</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 카드15 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="15.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 종각역 2016 봄 </h3>
+                        <p> 631×460mm • 한지에 혼합재료 채색 • 2016 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <!-- Cards go here -->
+        </div>
+        <div class="row">
+            <!-- 카드16 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="16.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 부평 문화의 거리 2016 봄 1 </h3>
+                        <p> 451×620mm • 한지에 혼합재료 채색 • 2015 </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 카드17 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card" style="width: 25rem; height: 25rem;">
+                    <img src="17.jpg" class="card-img-top" alt="냄비 이미지" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="overlay">
+                        <h3> 부평 문화의 거리 2015 봄 2 </h3>
+                        <p> 242×334mm • 한지에 혼합재료 채색 • 2015 </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 카드18 -->
+            <div class="col-md-6 col-lg-4 mx-auto">
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    
+</body>
+
+</html>
